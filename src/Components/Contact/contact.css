@@ -1,0 +1,139 @@
+.contact {
+  background: #0d1117;
+  color: #fff;
+  padding: 10px 60px;
+  margin-left: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+  margin-left: 0;
+  position: relative;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-header h2::after {
+  content: "";
+  display: block;
+  width: 6%;
+  height: 3px;
+  background-color: #00e676;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.contact-header span {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  color: rgba(255, 255, 255, 0.05);
+  letter-spacing: 10px;
+  font-weight: 900;
+  z-index: 1;
+}
+
+.contact-container {
+  margin-left: 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  margin-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.contact-card {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 230, 118, 0.2);
+  border-color: #00e676;
+}
+
+.contact-card .icon {
+  font-size: 2rem;
+  color: #00e676;
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  color: #00e676;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: #b0b3b8;
+  font-size: 0.95rem;
+}
+
+.contact-card a {
+  color: #e6eef6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-card a:hover {
+  color: #00e676;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    padding: 80px 30px;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  opacity: 0.8;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.copyright:hover {
+  color: #00e676;
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.6);
+}
