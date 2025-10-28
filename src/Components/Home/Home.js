@@ -29,7 +29,7 @@ export default function Home() {
           <p>Building performant, beautiful, and scalable web experiences.</p>
           <div className="resume-buttons">
             <a
-              href="/SUNIDHI_BHANDARI.pdf"
+              href="/SUNIDHI BHANDARI.pdf"
               target="_blank"
               rel="noopener noreferrer"
                className="about-download-btn"
@@ -38,8 +38,8 @@ export default function Home() {
             </a>
 
             <a
-              href="/SUNIDHI_BHANDARI.pdf"
-              download="SUNIDHI_BHANDARI.pdf"
+              href="/SUNIDHI BHANDARI.pdf"
+              download="SUNIDHI BHANDARI.pdf"
                className="about-download-btn"
             >
               Download Resume
