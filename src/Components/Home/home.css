@@ -74,25 +74,6 @@
   100% { transform: translateY(0); }
 }
 
-.down-arrow {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  cursor: pointer;
-  animation: float 2s ease-in-out infinite;
-}
-
-.arrow-icon {
-  font-size: 2.5rem;
-  color: white;
-  transition: transform 0.3s ease, color 0.3s ease;
-  margin-left: 0;
-}
-
-.down-arrow:hover .arrow-icon {
-  transform: scale(1.2);
-}
 
 @keyframes float {
   0% { transform: translateX(-50%) translateY(0); }
@@ -114,9 +95,6 @@ html {
     font-size: 2.5rem;
   }
 
-  .arrow-icon {
-    margin-left: 0;
-  }
 }
 
 @media (max-width: 768px) {
@@ -146,11 +124,6 @@ html {
     padding: 8px 20px;
     font-size: 0.9rem;
   }
-
-  .arrow-icon {
-    font-size: 2rem;
-    margin-left: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -166,21 +139,19 @@ html {
     padding: 7px 18px;
     font-size: 0.85rem;
   }
-
-  .arrow-icon {
-    font-size: 1.8rem;
-  }
 }
 @media (min-width: 769px) and (max-width: 1366px) {
   .content {
     margin-left: 60px;
   }
 
-  .arrow-icon {
-    margin-left: 60px;
-  }
-
   .home {
     background-position: center right;
   }
+}
+
+.resume-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }

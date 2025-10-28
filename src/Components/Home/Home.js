@@ -34,11 +34,24 @@ export default function Home() {
             </span>
           </h1>
           <p>Building performant, beautiful, and scalable web experiences.</p>
-          <button className="download-btn">Download CV</button>
-        </div>
+          <div className="resume-buttons">
+            <a
+              href="/SUNIDHI_BHANDARI.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+               className="about-download-btn"
+            >
+              View Resume
+            </a>
 
-        <div className="down-arrow" onClick={handleScrollToAbout}>
-          <KeyboardArrowDownIcon className="arrow-icon" />
+            <a
+              href="/SUNIDHI_BHANDARI.pdf"
+              download="SUNIDHI_BHANDARI.pdf"
+               className="about-download-btn"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
     </section>

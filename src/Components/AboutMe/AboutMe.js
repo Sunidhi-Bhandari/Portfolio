@@ -1,7 +1,6 @@
 import React from "react";
 import "./aboutMe.css";
 export default function AboutMe() {
-
   return (
     <section className="about-section" id="about">
       <div className="about-container">
@@ -30,7 +29,6 @@ export default function AboutMe() {
             </p>
           </div>
 
-          
           <div className="about-right">
             <ul className="about-info">
               <li>
@@ -50,40 +48,50 @@ export default function AboutMe() {
               </li>
             </ul>
 
-            <a
-              href="/Sunidhi_Bhandari_experience.pdf"
-              download
-              className="about-download-btn"
-            >
-              Download CV
-            </a>
+            <div className="resume-buttons">
+              <a
+                href="/SUNIDHI BHANDARI.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-download-btn"
+              >
+                View Resume
+              </a>
+              <a
+                href="/SUNIDHI BHANDARI.pdf"
+                download="SUNIDHI BHANDARI.pdf"
+                className="about-download-btn"
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
         </div>
-          <h2 className="section-title">Experience & Education</h2>
-          <div className="experience-grid">
-            <div className="experience-card">
-              <span className="badge">July 2018 - July 2022</span>
-              <h3>Information Technology</h3>
-              <h4>Rashtrasant Tukadoji Maharaj Nagpur University</h4>
-              <p>
-                Graduated with a Bachelor's degree in Information Technology,
-                gaining a strong foundation in computer science, programming,
-                and software development.
-              </p>
-            </div>
-
-            <div className="experience-card">
-              <span className="badge">August 2022 - August 2025</span>
-              <h3>Front-End Developer - React.js</h3>
-              <h4>Cybage Software Pvt. Ltd.</h4>
-              <p>
-                Developed and enhanced React dashboards with TypeScript, Redux
-                Toolkit, and Material UI. Led UI integration across multiple
-                products, improved performance by 25%, and maintained code
-                quality with Jest and RTL.
-              </p>
-            </div>
+        <h2 className="section-title">Experience & Education</h2>
+        <div className="experience-grid">
+          <div className="experience-card">
+            <span className="badge">July 2018 - July 2022</span>
+            <h3>Information Technology</h3>
+            <h4>Rashtrasant Tukadoji Maharaj Nagpur University</h4>
+            <p>
+              Graduated with a Bachelor's degree in Information Technology,
+              gaining a strong foundation in computer science, programming, and
+              software development.
+            </p>
           </div>
+
+          <div className="experience-card">
+            <span className="badge">August 2022 - August 2025</span>
+            <h3>Front-End Developer - React.js</h3>
+            <h4>Cybage Software Pvt. Ltd.</h4>
+            <p>
+              Developed and enhanced React dashboards with TypeScript, Redux
+              Toolkit, and Material UI. Led UI integration across multiple
+              products, improved performance by 25%, and maintained code quality
+              with Jest and RTL.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

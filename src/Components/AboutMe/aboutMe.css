@@ -199,7 +199,7 @@
 }
 
 .experience-card h4 {
-  color: #00e676;
+  color: #00e677;
   margin-bottom: 10px;
 }
 
@@ -355,3 +355,43 @@ html, body {
   overflow-x: hidden;
 }
 
+
+.resume-buttons {
+  display: flex;
+  gap: 16px; /* spacing between buttons */
+  margin-top: 20px;
+  flex-wrap: wrap; /* makes it responsive on smaller screens */
+}
+
+.about-download-btn {
+  display: inline-block;
+  background: transparent;
+  color: #00e676; /* bright green */
+  border: 2px solid #00e676;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.about-download-btn:hover {
+  background: #00e676;
+  color: #111;
+  box-shadow: 0 0 10px #00e676;
+}
+
+
+@media (max-width: 768px) {
+  .resume-buttons {
+    justify-content: center;
+    gap: 12px;
+  }
+  .about-download-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
