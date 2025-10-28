@@ -1,15 +1,8 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "./home.css";
 
 export default function Home() {
-  const handleScrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="home" id="home">

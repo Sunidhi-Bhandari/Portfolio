@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./navbar.css";
 import profilePic from "../../assets/profile.jpg";
 import HomeIcon from "@mui/icons-material/Home";
@@ -14,52 +13,105 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleToggle = () => setMenuOpen(!menuOpen);
-  const handleLinkClick = () => setMenuOpen(false);
+
+  const handleLinkClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", `#${id}`); // ✅ updates URL hash
+    }
+    setMenuOpen(false);
+  };
 
   return (
     <header className="topnav">
       <div className="topnav-inner">
+        {/* Logo */}
         <div className="logo">
-          <Link to="/" onClick={handleLinkClick} className="logo-link">
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick("home");
+            }}
+            className="logo-link"
+          >
             <img className="logo-pic" src={profilePic} alt="Profile" />
-          </Link>
-            <span className="logo-name">Sunidhi Bhandari</span>
+          </a>
+          <span className="logo-name">Sunidhi Bhandari</span>
         </div>
 
+        {/* Navigation */}
         <nav className={`nav ${menuOpen ? "open" : ""}`} aria-label="Main navigation">
           <ul>
             <li>
-              <Link to="/" onClick={handleLinkClick}>
+              <a
+                href="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick("home");
+                }}
+              >
                 <HomeIcon className="nav-icon" /> Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/about" onClick={handleLinkClick}>
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick("about");
+                }}
+              >
                 <PersonIcon className="nav-icon" /> About Me
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/tech" onClick={handleLinkClick}>
+              <a
+                href="#tech"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick("tech");
+                }}
+              >
                 <WorkIcon className="nav-icon" /> Tech Skills
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/contact" onClick={handleLinkClick}>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick("contact");
+                }}
+              >
                 <MailOutlineIcon className="nav-icon" /> Contact
-              </Link>
+              </a>
             </li>
           </ul>
 
+          {/* Social Links */}
           <div className="nav-socials">
-            <a href="mailto:sunidhibhandari10@gmail.com" className="social-link" aria-label="email">
+            <a
+              href="mailto:sunidhibhandari10@gmail.com"
+              className="social-link"
+              aria-label="email"
+            >
               <MailOutlineIcon className="social-icon" />
             </a>
-            <a href="https://www.linkedin.com/in/sunidhi-bhandari-5a9a1819a/" target="_blank" rel="noreferrer" className="social-link" aria-label="linkedin">
+            <a
+              href="https://www.linkedin.com/in/sunidhi-bhandari-5a9a1819a/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+              aria-label="linkedin"
+            >
               <LinkedInIcon className="social-icon" />
             </a>
           </div>
         </nav>
 
+        {/* Hamburger Menu */}
         <button
           className="hamburger"
           onClick={handleToggle}

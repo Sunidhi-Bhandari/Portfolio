@@ -86,10 +86,10 @@ export default function TechSkills() {
     ],
   };
   return (
-    <div className="tech-container">
+    <div className="tech-container" id="tech">
       <section className="skills-section">
         <h2 className="skills-title">
-           <h2 className="about-subtitle">TECH STACK & TOOLS</h2>
+           <h2 className="tech-subtitle">TECH STACK & TOOLS</h2>
           <h1 className="about-title">TECHNOLOGIES</h1>
         </h2>
         <div className="skills-container">

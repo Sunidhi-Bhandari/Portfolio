@@ -20,7 +20,7 @@
   font-weight: 800;
   opacity: 0.03;
   position: absolute;
-  top: 1%;
+  top: 3%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
@@ -29,17 +29,18 @@
 }
 
 
-.about-subtitle {
-  font-size: 2rem;
+.tech-subtitle {
+  font-size: 2.5rem;
   font-weight: 600;
   position: relative;
   display: inline-block;
   z-index: 2;
   color: #fff;
+  padding: 85px;
 }
 
 
-.about-subtitle::after {
+.tech-subtitle::after {
   content: "";
   display: block;
   width: 50%;
